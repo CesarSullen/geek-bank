@@ -1,0 +1,292 @@
+@import "reset";
+@import "navbar";
+@import "animations";
+@import "footer";
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	padding: 1.5rem;
+	gap: 40px;
+	max-width: 1100px;
+
+	@media (min-width: 700px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.hero-text {
+		text-align: center;
+
+		@media (min-width: 700px) {
+			text-align: left;
+		}
+
+		.hero-title {
+			font-family: "Poppins";
+			font-size: 3rem;
+			font-weight: 600;
+			color: #2d3138;
+			line-height: 1.1;
+			margin-bottom: 1rem;
+
+			@media (min-width: 700px) {
+				font-size: 4.5rem;
+			}
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+			color: $dark-color;
+			margin-bottom: 2rem;
+			opacity: 0.8;
+		}
+	}
+
+	.hero-image {
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		.shield-img {
+			max-width: 300px;
+			animation: float 6s ease-in-out infinite;
+
+			@media (min-width: 700px) {
+				max-width: 400px;
+			}
+		}
+	}
+}
+
+/* =====================
+   FEATURES BAR
+===================== */
+.features-bar {
+	background-color: #fff;
+	border-radius: $border-radius-general;
+	box-shadow: $shadow-soft;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+
+	@media (min-width: 700px) {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 3rem;
+	}
+
+	.feature-item {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		transition: transform 0.3s ease;
+		cursor: default;
+
+		&:hover {
+			transform: translateX(5px);
+		}
+
+		.icon-circle {
+			width: 50px;
+			height: 50px;
+			background-color: rgba($secondary-color, 0.45);
+			border-radius: 50%;
+			@include flex-center;
+
+			img {
+				width: 30px;
+			}
+		}
+
+		.feature-text {
+			text-align: left;
+			h3 {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: $primary-color;
+				margin-bottom: 2px;
+				letter-spacing: 0.5px;
+			}
+
+			p {
+				font-size: 0.85rem;
+				color: lighten($dark-color, 15%);
+			}
+		}
+	}
+}
+
+/* =====================
+   BENEFITS SECTION
+===================== */
+.benefits-section {
+	margin-bottom: 2rem;
+}
+.benefits-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	align-items: center;
+
+	@media (min-width: 700px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.benefits-image {
+	img {
+		justify-self: center;
+		border-radius: $border-radius-general;
+		box-shadow: $shadow-soft;
+		max-width: 300px;
+	}
+}
+
+.section-title {
+	text-align: center;
+
+	@media screen and (min-width: 700px) {
+		text-align: left;
+	}
+}
+
+.section-desc {
+	color: $dark-color;
+	margin-bottom: 2.5rem;
+	max-width: 600px;
+	text-align: center;
+
+	@media screen and (min-width: 700px) {
+		text-align: left;
+	}
+}
+
+.benefits-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+
+	@media (min-width: 700px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.benefit-item {
+		h4 {
+			color: $primary-color;
+			font-size: 1.1rem;
+			line-height: 1.2;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+			color: lighten($dark-color, 15%);
+			line-height: 1.4;
+		}
+	}
+}
+
+/* =====================
+   TESTIMONIALS & GROWTH
+===================== */
+
+.social-proof-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+
+	@media (min-width: 700px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.testimonials-col {
+	.section-title {
+		margin-bottom: 2rem;
+	}
+
+	.testimonial-card {
+		display: flex;
+		gap: 20px;
+		margin-bottom: 2rem;
+
+		.avatar {
+			flex-shrink: 0;
+			width: 60px;
+			height: 60px;
+			border-radius: $border-radius-general;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				aspect-ratio: 1;
+				object-fit: cover;
+			}
+		}
+
+		.testimonial-text {
+			position: relative;
+
+			.quote-mark {
+				position: absolute;
+				top: -10px;
+				left: -15px;
+				font-family: serif;
+				font-size: 3rem;
+				color: $primary-color;
+				opacity: 0.2;
+				line-height: 1;
+			}
+
+			p {
+				font-size: 0.95rem;
+				margin-bottom: 0.5rem;
+				z-index: 2;
+			}
+
+			.client-name {
+				font-size: 0.85rem;
+				font-weight: 600;
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+.growth-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media (min-width: 700px) {
+		align-items: flex-end;
+		text-align: right;
+	}
+
+	.chart {
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 1.5rem;
+		img {
+			width: 100%;
+			height: auto;
+			border: solid 2px $primary-color;
+			border-radius: $border-radius-general;
+			box-shadow: $shadow-soft;
+		}
+	}
+
+	.growth-content {
+		h3 {
+			font-size: 1.8rem;
+			font-weight: 600;
+			color: #2d3138;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
