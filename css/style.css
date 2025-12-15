@@ -173,6 +173,7 @@ section {
   justify-content: space-around;
   padding: 5px 0;
   transition: all 0.3s ease;
+  background: transparent;
 }
 @media (min-width: 700px) {
   .nav .nav-toggle {
