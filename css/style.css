@@ -61,6 +61,7 @@ svg {
 
 .highlight {
   color: #143d6b;
+  font-weight: 600;
 }
 
 /* =====================
@@ -77,6 +78,13 @@ svg {
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .btn {
+    max-width: 200px;
+  }
 }
 .btn.btn-primary {
   background-color: #143d6b;
@@ -127,7 +135,7 @@ section {
   justify-content: space-between;
   width: 100%;
   padding: 2rem;
-  position: relative;
+  position: sticky;
 }
 .nav .nav-brand {
   display: flex;
@@ -205,6 +213,7 @@ section {
 .nav .nav-menu.show-menu {
   opacity: 1;
   visibility: visible;
+  background-color: #fff;
   transform: translateY(0);
 }
 .nav .nav-menu .nav-link {
@@ -499,13 +508,14 @@ section {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 2rem;
 }
 @media (min-width: 700px) {
   .features-bar {
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
     padding: 3rem;
   }
 }
@@ -702,6 +712,56 @@ section {
   font-weight: 600;
   color: #2d3138;
   margin-bottom: 1.5rem;
+}
+
+/* =====================
+  		 LEGACY
+===================== */
+.legacy-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 700px) {
+  .legacy-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.legacy-content .btn {
+  max-width: 300px;
+}
+
+.legacy-image {
+  width: 100%;
+}
+
+.legacy-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 700px) {
+  .legacy-pillars {
+    flex-direction: row;
+  }
+}
+.legacy-pillars .pillar-item {
+  padding: 0.8rem;
+  border: 1px solid rgba(20, 61, 107, 0.1);
+  border-radius: 12px;
+}
+.legacy-pillars .pillar-item .pillar-icon {
+  max-width: 40px;
+  margin-bottom: 0.5rem;
+}
+.legacy-pillars .pillar-item h4 {
+  font-size: 1.1rem;
+}
+.legacy-pillars .pillar-item p {
+  font-size: 0.85rem;
+  color: rgb(113.7305389222, 119.5628742515, 129.7694610778);
 }
 
 /*# sourceMappingURL=style.css.map */

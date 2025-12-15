@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: 2rem;
-	position: relative;
+	position: sticky;
 
 	.nav-brand {
 		display: flex;
@@ -90,6 +90,7 @@
 		&.show-menu {
 			opacity: 1;
 			visibility: visible;
+			background-color: #fff;
 			transform: translateY(0);
 		}
 

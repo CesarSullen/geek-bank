@@ -70,6 +70,7 @@ svg {
 
 .highlight {
 	color: $primary-color;
+	font-weight: 600;
 }
 
 /* =====================
@@ -92,6 +93,12 @@ svg {
 	font-size: 0.9rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+
+	@media screen and (min-width: 700px) {
+		max-width: 200px;
+	}
 
 	&.btn-primary {
 		background-color: $primary-color;
